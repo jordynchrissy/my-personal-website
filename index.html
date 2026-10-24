@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link type="image/png" sizes="16x16" rel="icon" href="imagez/icons8-star-16.png">
-    <title>My Personal Portfolio! </title>
+    <title>My Personal Portfolio!</title>
 </head>
 
-<body>
+<body id="top">
 
+    <!-- HEADER AND NAVIGATION -->
     <header>
         <nav>
             <ul>
@@ -18,148 +20,250 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
         </nav>
     </header>
 
-
+    <!-- MAIN CONTENT -->
     <main>
 
-        <section id="home">
-            <h1>Welcome to My Website ₊˚ ⊹ ♡</h1>
+        <!-- ABOUT ME -->
+        <section id="about" class="about-section">
 
-            <p>
-                Here you can learn a little
-                about me, view some of my work and find ways to contact me.
-            </p>
+            <div class="profile-card">
 
-            <a href="#portfolio">
-                <img src="imagez/ccat.jpg"
-                     alt="A picture that will take you to my portfolio."
-                     width="300" class="profile-image">
-            </a>
+                <a href="#portfolio">
+                    <img
+                        src="imagez/ccat.jpg"
+                        alt="A picture that will take you to my portfolio."
+                        width="300"
+                        class="profile-image"
+                    >
+                </a>
 
-            <p>Click the the cat to go to my portfolio. ;)</p>
-        </section>
+                <h2>hii, i'm jordyn ^_^ ♡</h2>
 
+                <p>
+                    second year college student ♡ lover of all things computer science
+                </p>
 
-        <section id="about">
-            <h2>About Me</h2>
+                <p>
+                    just someone who loves all things tech & art. :D
+                    i love creating and designing, and seize every opportunity to express my whimsy in my own way.
+                </p>
 
-            <p>
-                Hii, my name is Jordyn Christopher, I am a second year college student with a love for all things technology and art. I love creating and designing, and seize every opputinnity to express my whimsy in my own way.
-            </p>
+            </div>
 
-            <h3>My Skills!</h3>
+            <!-- MY SKILLS -->
+            <div class="skills-section">
+                <h3>things i can do ⋆౨ৎ˚⟡˖</h3>
 
-            <table border="1">
-                <caption></caption>
+                <table class="skills-table">
+                    <thead>
+                        <tr>
+                            <th>Skill</th>
+                            <th>Level</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
 
-                <thead>
-                    <tr>
-                        <th>Skill</th>
-                        <th>Experience Level</th>
-                        <th>Area</th>
-                    </tr>
-                </thead>
+                    <tbody>
+                        <tr>
+                            <td>Graphic Design</td>
+                            <td>Experienced</td>
+                            <td>Visual Arts</td>
+                        </tr>
 
-                <tbody>
-                    <tr>
-                        <td>Graphic Design</td>
-                        <td>Experienced</td>
-                        <td>Visual Arts</td>
-                    </tr>
+                        <tr>
+                            <td>Python</td>
+                            <td>Intermediate</td>
+                            <td>Programming</td>
+                        </tr>
 
-                    <tr>
-                        <td>Python</td>
-                        <td>Intermediate</td>
-                        <td>Programming</td>
-                    </tr>
-
-                    <tr>
-                        <td>Typography</td>
-                        <td>Experienced</td>
-                        <td>Creative Design</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-
-        <section id="portfolio">
-            <h2>My Portfolio</h2>
-
-            <p>
-                Here is one of my graphic design pieces I have worked on; my business card. :)
-            </p>
-
-            <h3>My Featured Project!</h3>
-
-        
-                <img src="imagez/thebest.png" alt="Preview of my project!" width="500" height="600" class="portfolio-image">    
-
-
-            
-            
-<h3>Graphic Design Process!</h3>
-     
-
-<iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/0BnuvEoyaZ0"
-    title="My Video"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-</iframe>
-
+                        <tr>
+                            <td>Typography</td>
+                            <td>Experienced</td>
+                            <td>Creative Design</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
         </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
 
-            <p>
-                Need to get in touch with me? Here's all my contact info! :)
-            </p>
+        <!-- PORTFOLIO -->
+        <section id="portfolio" class="portfolio-section">
+            <h2>My Portfolio ♡</h2>
 
-        
-            <table border="1">
-                <caption>Contact Information</caption>
+            <div class="portfolio-grid">
 
-                <thead>
-                    <tr>
-                        <th>Method</th>
-                        <th>Information</th>
-                    </tr>
-                </thead>
+                <!-- BUSINESS CARD PROJECT -->
+                <article class="project-card">
+                    <img
+                        src="imagez/thebest.png"
+                        alt="My graphic design business card"
+                        class="portfolio-image"
+                    >
 
-                <tbody>
-                    <tr>
-                        <td>Email</td>
-                        <td>JordynC6403@tamcc.edu.gd</td>
-                    </tr>
+                    <div class="project-content">
+                        <h3>My Business Card</h3>
 
-                    <tr>
-                        <td>Cellphone</td>
-                        <td>1 (473) 495-2293</td>
-                    </tr>
+                        <p>
+                            Here is one of my graphic design pieces I have worked on; my business card. :)
+                        </p>
+                    </div>
+                </article>
 
-                    <tr>
-                        <td>Location</td>
-                        <td>St. John, Grenada</td>
-                    </tr>
-                </tbody>
-            </table>
+                <!-- GRAPHIC DESIGN VIDEO -->
+                <article class="project-card">
+                    <div class="video-container">
+                        <iframe
+                            src="https://www.youtube.com/embed/0BnuvEoyaZ0"
+                            title="Graphic Design Process"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+
+                    <div class="project-content">
+                        <h3>Graphic Design Process</h3>
+
+                        <p>
+                            A helpful little video exploring the creative process behind
+                            turning ideas into designs!
+                        </p>
+                    </div>
+                </article>
+
+            </div>
         </section>
+
+        <!-- CONTACT AND FAQ LAYOUT -->
+        <div class="contact-layout">
+
+            <!-- CONTACT INFORMATION -->
+            <section id="contact">
+                <h2>Contact Me ♡</h2>
+
+                <p>
+                    Need to get in touch with me? Here's all my contact info! :)
+                </p>
+
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Method</th>
+                            <th>Information</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Email</td>
+                            <td>JordynC6403@tamcc.edu.gd</td>
+                        </tr>
+
+                        <tr>
+                            <td>Cellphone</td>
+                            <td>1 (473) 495-2293</td>
+                        </tr>
+
+                        <tr>
+                            <td>Location</td>
+                            <td>St. John, Grenada</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- FREQUENTLY ASKED QUESTIONS -->
+            <aside id="faq">
+                <h2>FAQs ♡</h2>
+
+                <p>Here are a few quick answers to common questions!</p>
+
+                <div class="faq-container">
+
+                    <details class="faq-item">
+                        <summary>What services do you offer?</summary>
+
+                        <p>
+                            I offer web design, graphic design and creative
+                            project assistance. :)
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>How can I book a consultation?</summary>
+
+                        <p>
+                            Calling me is one of the fastest ways to book a consultation. You can also email me, and I will try to get back to you as soon as possible!
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What tools do you use?</summary>
+
+                        <p>
+                            I use HTML and CSS for web design, alongside
+                            creative tools like Canva and Adobe Illustrator for graphic design.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>How can I contact you?</summary>
+
+                        <p>
+                            You can find my contact information in the
+                            Contact section of my website. ^_^
+                        </p>
+                    </details>
+
+                </div>
+            </aside>
+
+        </div>
+
+        <!-- BACK-TO-TOP LINK -->
+        <a href="#top" id="backToTop" aria-label="Back to top">
+            ➹
+        </a>
 
     </main>
 
+    <!-- FOOTER -->
+    <footer class="site-footer">
 
-    <footer>
-        <p> Thank you for viewing my website, take care. <3</p>
+        <div class="footer-content">
+
+            <p class="footer-message">
+                Thank you for viewing my website, take care. &lt;3
+            </p>
+
+            <!-- FOOTER NAVIGATION -->
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+
+            <div class="footer-divider"></div>
+
+            <p class="footer-credit">
+                Made with ♡ by Jords :)
+            </p>
+
+            <p class="footer-copyright">
+                &copy; 2026 Jordyn Christopher. All rights reserved.
+            </p>
+
+        </div>
+
     </footer>
 
 </body>
-
 </html>
