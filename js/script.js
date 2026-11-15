@@ -169,3 +169,140 @@ closeWelcomeButton.addEventListener("click", function () {
     welcomePopup.style.display = "none";
 
 });
+
+// =========================================
+// WEBSITE SEARCH AND TEXT COUNTER
+// =========================================
+
+// Get the search input and counter elements
+const siteSearch = document.getElementById("siteSearch");
+const wordCount = document.getElementById("wordCount");
+const characterCount = document.getElementById("characterCount");
+
+// Listen for text entered into the search bar
+siteSearch.addEventListener("input", function () {
+
+    // Get the text entered by the visitor
+    const searchText = siteSearch.value;
+
+    // Count the characters, including spaces
+    characterCount.textContent =
+        searchText.length + " characters";
+
+    // Count the words
+    const words = searchText.trim().split(/\s+/);
+
+    const totalWords = searchText.trim() === ""
+        ? 0
+        : words.length;
+
+    wordCount.textContent = totalWords + " words";
+
+    // Search the website
+    const sections = document.querySelectorAll("main section");
+
+    sections.forEach(function (section) {
+
+        // Remove previous highlights
+        section.querySelectorAll("mark").forEach(function (highlight) {
+
+            const originalText = document.createTextNode(
+                highlight.textContent
+            );
+
+            highlight.replaceWith(originalText);
+
+        });
+
+    });
+
+    // Stop if the search field is empty
+    if (searchText.trim() === "") {
+        return;
+    }
+
+    // Search through the text in each section
+    const searchTerm = searchText.trim().toLowerCase();
+
+    sections.forEach(function (section) {
+
+        const textElements = section.querySelectorAll("h2, h3, p, li");
+
+        textElements.forEach(function (element) {
+
+            const text = element.textContent;
+
+            if (text.toLowerCase().includes(searchTerm)) {
+
+                const regex = new RegExp(
+                    searchTerm.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+                    "gi"
+                );
+
+                element.innerHTML = element.textContent.replace(
+                    regex,
+                    function (match) {
+                        return "<mark>" + match + "</mark>";
+                    }
+                );
+
+            }
+
+        });
+
+    });
+
+});
+
+// =========================================
+// SCROLL REVEAL ANIMATIONS
+// =========================================
+
+// Select the content we want to animate
+const revealElements = document.querySelectorAll(
+    "section, .project-card, .profile-card, .faq-item"
+);
+
+// Check whether the browser supports scroll observation
+if ("IntersectionObserver" in window) {
+
+    // Create an observer to detect when content enters the screen
+    const revealObserver = new IntersectionObserver(function (entries) {
+
+        entries.forEach(function (entry) {
+
+            if (entry.isIntersecting) {
+
+                // Reveal the content
+                entry.target.classList.add("visible");
+
+                // Stop observing once it has appeared
+                revealObserver.unobserve(entry.target);
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.12
+    });
+
+    // Observe each selected element
+    revealElements.forEach(function (element) {
+
+        element.classList.add("scroll-reveal");
+
+        revealObserver.observe(element);
+
+    });
+
+} else {
+
+    // Display everything normally if the feature isn't supported
+    revealElements.forEach(function (element) {
+
+        element.classList.add("visible");
+
+    });
+
+}
