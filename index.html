@@ -103,22 +103,39 @@
 
             <div class="portfolio-grid">
 
-                <!-- BUSINESS CARD PROJECT -->
-                <article class="project-card">
-                    <img
-                        src="images/businesscard.png"
-                        alt="My graphic design business card"
-                        class="portfolio-image"
-                    >
+                
+<!-- BUSINESS CARD IMAGE SLIDESHOW -->
+<article class="project-card">
 
-                    <div class="project-content">
-                        <h3>My Business Card</h3>
+    <div class="slideshow">
 
-                        <p>
-                            Here is one of my graphic design pieces I have worked on; my business card. :)
-                        </p>
-                    </div>
-                </article>
+        <img
+            id="slideshowImage"
+            src="images/businesscard.png"
+            alt="My graphic design business card"
+            class="portfolio-image"
+        >
+
+    </div>
+
+    <div class="slideshow-controls">
+        <button id="previousSlide" type="button">❮</button>
+
+        <span id="slideCounter">1 / 2</span>
+
+        <button id="nextSlide" type="button">❯</button>
+    </div>
+
+    <div class="project-content">
+        <h3>My Business Card</h3>
+
+        <p>
+            Here is one of my graphic design pieces I have worked on; my business card. :)
+        </p>
+    </div>
+
+</article>
+
 
                 <!-- GRAPHIC DESIGN VIDEO -->
                 <article class="project-card">
@@ -271,6 +288,6 @@
     </footer>
 
     <script src="js/script.js"></script>
-    
+
 </body>
 </html>
