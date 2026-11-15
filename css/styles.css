@@ -731,3 +731,90 @@ section a {
         width: 85%;
     }
 }
+
+/* =========================================
+   DARK MODE TOGGLE BUTTON
+========================================= */
+
+#themeToggle {
+    padding: 8px 15px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#themeToggle:hover {
+    background-color: white;
+    color: #e66f9b;
+}
+
+/* DARK MODE COLOURS */
+
+body.dark-mode {
+    background-color: #29212b;
+    color: #f8eaf0;
+}
+
+body.dark-mode section,
+body.dark-mode .contact-layout #faq {
+    background-color: #382d3b;
+    border-color: #68445b;
+}
+
+body.dark-mode .profile-card,
+body.dark-mode .project-card {
+    background-color: #453548;
+    border-color: #68445b;
+}
+
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode a {
+    color: #ffb6d0;
+}
+
+body.dark-mode p,
+body.dark-mode .faq-item > p {
+    color: #f8eaf0;
+}
+
+body.dark-mode .skills-table,
+body.dark-mode #contact table {
+    background-color: #453548;
+    color: #f8eaf0;
+}
+
+body.dark-mode .skills-table th,
+body.dark-mode #contact th {
+    background-color: #68445b;
+    color: white;
+}
+
+body.dark-mode .skills-table td,
+body.dark-mode #contact td {
+    border-color: #68445b;
+}
+
+body.dark-mode .faq-item {
+    background-color: #453548;
+    border-color: #68445b;
+}
+
+body.dark-mode .faq-item summary {
+    color: #ffb6d0;
+}
+
+body.dark-mode .site-footer {
+    background: linear-gradient(135deg, #382d3b, #68445b);
+    color: #f8eaf0;
+}
+
+body.dark-mode .footer-nav a {
+    color: #ffb6d0;
+}
