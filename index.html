@@ -12,6 +12,36 @@
 
 <body id="top">
 
+    <!-- WELCOME GREETING POPUP -->
+<div id="welcomePopup" class="welcome-overlay">
+
+    <div class="welcome-card">
+
+        <p class="welcome-sparkle">⸜(｡˃ ᵕ ˂ )⸝✉︎</p>
+
+        <h2>hello, stranger :) ♡</h2>
+
+        
+        <p id="quoteText" aria-live="polite">
+            You are capable of wonderful things.
+        </p>
+
+        <p class="welcome-footer">
+            a little reminder, just for you :*
+        </p>
+
+        <button id="newQuote" type="button">
+            another? ♡
+        </button>
+
+        <button id="closeWelcome" type="button">
+            let's explore ♡
+        </button>
+
+    </div>
+
+</div>
+
     <!-- HEADER AND NAVIGATION -->
     <header>
         <nav>
@@ -21,9 +51,36 @@
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#faq">FAQ</a></li>
+                
+                <!-- WEBSITE SEARCH AND TEXT COUNTER --> 
+                <li class="nav-search-item">
+
+                    <input
+                        type="search"
+                        id="siteSearch"
+                        placeholder="looking? ..."
+                        aria-label="Search website"
+                    >
+
+                    <div class="search-stats">
+                        <span id="wordCount">0 words</span>
+                        <span id="characterCount">0 characters</span>
+                    </div>
+
+                </li>
+                <li>
+                    <button id="themeToggle" type="button">
+                    ⏾⋆. dark mode?
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
+
+    <!-- DIGITAL CLOCK -->
+        <div class="clock-container">
+            <p id="digitalClock">loading time ...꩜</p>
+        </div>
 
     <!-- MAIN CONTENT -->
     <main>
@@ -91,6 +148,7 @@
             </div>
 
         </section>
+        
 
         <!-- PORTFOLIO -->
         <section id="portfolio" class="portfolio-section">
@@ -98,22 +156,39 @@
 
             <div class="portfolio-grid">
 
-                <!-- BUSINESS CARD PROJECT -->
-                <article class="project-card">
-                    <img
-                        src="images/businesscard.png"
-                        alt="My graphic design business card"
-                        class="portfolio-image"
-                    >
+                
+<!-- BUSINESS CARD IMAGE SLIDESHOW -->
+<article class="project-card">
 
-                    <div class="project-content">
-                        <h3>My Business Card</h3>
+    <div class="slideshow">
 
-                        <p>
-                            Here is one of my graphic design pieces I have worked on; my business card. :)
-                        </p>
-                    </div>
-                </article>
+        <img
+            id="slideshowImage"
+            src="images/businesscard.png"
+            alt="My graphic design business card"
+            class="portfolio-image"
+        >
+
+    </div>
+
+    <div class="slideshow-controls">
+        <button id="previousSlide" type="button">❮</button>
+
+        <span id="slideCounter">1 / 2</span>
+
+        <button id="nextSlide" type="button">❯</button>
+    </div>
+
+    <div class="project-content">
+        <h3>My Business Card</h3>
+
+        <p>
+            Here is one of my graphic design pieces I have worked on; my business card. :)
+        </p>
+    </div>
+
+</article>
+
 
                 <!-- GRAPHIC DESIGN VIDEO -->
                 <article class="project-card">
@@ -162,7 +237,7 @@
                     <tbody>
                         <tr>
                             <td>Email</td>
-                            <td>JordynC6403@tamcc.edu.gd</td>
+                            <td><a href="mailto:JordynC6403@tamcc.edu.gd">JordynC6403@tamcc.edu.gd</a></td>
                         </tr>
 
                         <tr>
@@ -176,6 +251,9 @@
                         </tr>
                     </tbody>
                 </table>
+
+
+                
             </section>
 
             <!-- FREQUENTLY ASKED QUESTIONS -->
@@ -264,6 +342,8 @@
         </div>
 
     </footer>
+
+    <script src="js/script.js"></script>
 
 </body>
 </html>
